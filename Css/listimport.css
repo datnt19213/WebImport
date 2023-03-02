@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #f8f8f8;
+    --text-color: #ffffffcc;
+    --text2-color: #ff0000cc;
+    --text-color-hover: #ffffff;
+    --shadow: rgba(200, 200, 200, 0.8);
+    --line1-color: rgba(180, 180, 180, 0.5);
+    --line2-color: rgba(255, 255, 255, 1);
+    --font: sans-serif;
+    --font-size1: 1.5rem;
+    --font-size2: 2rem;
+    --font-size3: 2.5rem;
+    --font-size4: 3rem;
+    --font-size5: 5rem;
+    --bg-color: rgba(0, 150, 0, 0.8);
+    --bg-color2: rgba(0, 150, 0, 0.5);
+    --bg-trans: transparent;
+    --bg-trans2: rgba(0, 0, 0, 0.3);
+  }
+
+.list-import{
+    background-color: var(--bg-trans2);
+    backdrop-filter: blur(3px);
+    backdrop-filter: contrast(100%);
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    margin: 0 100px 100px 100px;
+
+}
+
+.list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.list-title{
+    color: var(--text-color-hover);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: var(--font-size3);
+    text-align: center;
+    font-family: var(--font);
+}
+.table{
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tb-cell{
+    color: var(--text-color-hover);
+    font-size: var(--font-size2);
+    font-family: var(--font);
+    white-space: nowrap;
+    text-align: center;
+    width: 180px;
+}
+.table-header{
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    width: 500px;
+
+}
+
+.table-form{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.table-layout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tb-body{
+    width: 500px;
+    overflow: hidden;
+}
+
+.tb-row{
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+}

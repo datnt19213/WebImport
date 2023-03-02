@@ -1,0 +1,153 @@
+
+:root {
+    --main-color: #f8f8f8;
+    --text-color: #ffffffcc;
+    --text2-color: #ff0000cc;
+    --text-color-hover: #ffffff;
+    --text-color-hover1: rgba(45, 85, 255, 1);
+    --shadow: rgba(200, 200, 200, 0.8);
+    --line1-color: rgba(180, 180, 180, 0.5);
+    --line2-color: rgba(255, 255, 255, 1);
+    --font: sans-serif;
+    --font-size1: 1.5rem;
+    --font-size2: 2rem;
+    --font-size3: 2.5rem;
+    --font-size4: 3rem;
+    --font-size5: 5rem;
+    --bg-color: rgba(0, 150, 0, 0.8);
+    --bg-color2: rgba(0, 150, 0, 0.5);
+    --bg-color3: rgba(46, 204, 113, 1);
+    --bg-color4: rgba(45, 85, 255, 1);
+    --bg-trans: transparent;
+    --bg-trans2: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html {
+    font-size: 62.5%;
+}
+  
+body {
+    background-image: url(../Image/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.import-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font);
+    margin-top: 100px;
+}
+  
+.import-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+  
+.import-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.import-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+  
+.file-name {
+    font-family: var(--font);
+    margin-bottom: 10px;
+    padding: 2px;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.file-name:hover {
+    color: var(--text-color);
+}
+  
+.import-btn-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(123deg, rgba(67,180,58,1) 33%, rgba(159,23,221,1) 67%, rgba(69,122,252,1) 100%);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.import-btn-label:hover {
+    transform: scale(1.1);
+}
+  
+.label {
+    margin-left: 10px;
+    color: var(--text-color);
+    font-family: var(--font);
+}
+  
+.import-icon {
+    font-size: 24px;
+}
+  
+.import-btn {
+    background: linear-gradient(123deg, rgba(58,58,180,1) 33%, rgba(221,23,173,1) 67%, rgba(252,69,88,1) 100%);
+    color: var(--text-color);
+    font-family: var(--font);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.import-btn:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 900px) {
+    .import-title {
+        font-size: 20px;
+    }
+
+    .file-name {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .import-btn-label {
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .import-icon {
+        font-size: 15px;
+    }
+
+    .import-btn {
+        border-radius: 4px;
+        margin-top: 18px;
+        font-size: 16px;
+        padding: 8px;
+    }
+}

@@ -9,12 +9,13 @@ require("./Data/connection.php");
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Import</title>
-  <link rel="stylesheet" href="./Css/index.css" />
+  <link rel="stylesheet" href="./Css/import.css" />
 </head>
 
 <body>
   <div class="import-container">
     <p class="import-title">Now, Let's import your file</p>
+
     <form method="POST" enctype="multipart/form-data" class="import-form">
       <div class="import-box">
         <p class="file-name" id="filename"></p>

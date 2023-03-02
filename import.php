@@ -20,7 +20,7 @@ require("./Data/connection.php");
         <p class="file-name" id="filename"></p>
 
         <!-- No css the below "input" tag -->
-        <input style="display: none" type="file" name="" id="fileinput" />
+        <input style="display: none" type="file" name="excel" id="fileinput" />
         <!-- ----------------------------- -->
 
         <label for="fileinput" class="import-btn-label">
@@ -30,6 +30,7 @@ require("./Data/connection.php");
       </div>
       <button type="submit" class="import-btn" name="fileImport">
         Import File
+        <?php echo PHP_VERSION ?>
       </button>
     </form>
   </div>
@@ -42,7 +43,7 @@ require("./Data/connection.php");
 
     $newFileName = date("Y.m.d") . '-' . date("H.i.s") . "." . $fileExtension;
 
-    $targetDirectory = "uploads/" . $newFileName;
+    $targetDirectory = "./uploads/" . $newFileName;
     move_uploaded_file($_FILES["excel"]["tmp_name"], $targetDirectory);
 
     error_reporting(0);
@@ -55,16 +56,33 @@ require("./Data/connection.php");
     // link video to use this module
     // https://www.youtube.com/watch?v=yTo22GBGPzs&t=364s
 
+    if ($reader) {
+      echo "<script>alert('Read True')</script>";
+    } else {
+      echo "<script>alert('Read Fail')</script>";
+    }
+
     foreach ($reader as $key => $row) {
       $englishWords = $row[0];
       $wordsLength = $row[1];
       $wordsMeans = $row[2];
-      $result = mysqli_query($conn, "INSERT INTO dictionary VALUES($englishWords,$wordsLength,$wordsMeans)");
+
+      $insertQuery = "INSERT INTO dictionary(words, length, means) VALUES('" . $englishWords . "','" . $wordsLength . "','" . $wordsMeans . "')";
+      $result = mysqli_query($conn, $insertQuery);
+      // if ($result) {
+      //   echo "<script>
+      //           confirm('IMPORT SUCCESSFULLY');
+      //         </script>";
+      // } else {
+      //   echo "<script>
+      //           confirm('----------------------');
+      //         </script>";
+      // }
     }
     echo "<script>
                 confirm('IMPORT SUCCESSFULLY');
               </script>";
-    echo '<meta http-equiv="refresh" content="0;URL=?page=listimport" />';
+    // echo '<meta http-equiv="refresh" content="0;URL=?page=listimport" />';
   }
   ?>
 </body>

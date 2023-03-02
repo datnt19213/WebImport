@@ -29,10 +29,7 @@ require("./Data/connection.php");
           <p class="label">Choose your file</p>
         </label>
       </div>
-      <button type="submit" class="import-btn" name="fileImport">
-        Import File
-        <?php echo PHP_VERSION ?>
-      </button>
+      <button type="submit" class="import-btn" name="fileImport">Import File</button>
     </form>
   </div>
   <?php

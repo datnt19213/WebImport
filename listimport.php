@@ -34,9 +34,9 @@ require("./Data/connection.php")
               foreach ($rows as $row) :
               ?>
                 <div class="tb-row">
-                  <div class="tb-cell"><?php echo $row['words']; ?></div>
-                  <div class="tb-cell"><?php echo $row['length']; ?></div>
-                  <div class="tb-cell"><?php echo $row['means']; ?></div>
+                  <div class="tb-cell"><?php echo $row["words"]; ?></div>
+                  <div class="tb-cell"><?php echo $row["lengths"]; ?></div>
+                  <div class="tb-cell"><?php echo $row["means"]; ?></div>
                 </div>
               <?php endforeach; ?>
             </div>

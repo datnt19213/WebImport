@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `dictionary` (
-  `words` text NOT NULL,
-  `length` int(100) NOT NULL,
-  `means` text NOT NULL
+  `words` varchar(100) NOT NULL,
+  `lengths` int(10) NOT NULL,
+  `means` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
